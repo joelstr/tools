@@ -20,11 +20,16 @@ for i in range(len(medlemmar)):
         redteam[1] = roller[i]
     else:
         goldteam.append(roller[i])
+    if medlemmar[i] == "Viking Line":
+        TibbeChar = roller[i]
 
 print()
 
 # random.shuffle(roller)
 random.shuffle(goldteam)
+while goldteam[-1] == TibbeChar:
+    random.shuffle(goldteam)
+
 print("Paketpris vanns denna gången av " + redteam[0])
 print("Sista ner vanns denna gången av " + redteam[1])
 for i in range(len(goldteam)):
